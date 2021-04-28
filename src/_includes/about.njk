@@ -1,0 +1,61 @@
+---
+layout: base.njk
+---
+
+<div class="font-slab">
+<section class="flex h-90vh items-center">
+    <div class="flex flex-col flex-shrink-0 text-gray-darker">
+        <h1 class="type-presentation-heading-3">I'm Mehdi</h1>
+        <p class="text-shadow-rainbow leading-single type-presentation-heading-2">I Build Things <br> for the Web.</p>
+    </div>
+    <div>
+        {% image "./src/assets/images/abstrakt-design-1.png", "", "(min-width: xl) 1000px, 800px", "w-1000px"  %}
+    </div>
+</section>
+
+<section class="flex flex-col">
+    <div class="flex flex-shrink-0 mb-6 items-center">
+        <h2 id="who-am-i" class="text-gray text-shadow-heading z-1 type-presentation-heading-1">Who<br>Am<br>I</h2>
+        <div class="bg-primary-light border border-gray-dark rounded-full border-4 shadow-images transform -translate-x-6rem -translate-y-2rem" style="border-radius: 255px 235px 225px 245px/195px 225px 195px 255px;">
+            <div class="border border-gray-dark border-4 h-10 transform w-10 translate-x-1rem translate-y-2rem overflow-hidden" style="mix-blend-mode: darken; border-radius: 255px 65px 225px 35px/35px 225px 55px 255px;">
+                {% image "./src/assets/images/Avatar.jpg", "", "360px", "w-full h-1/1"  %}
+            </div>
+        </div>
+    </div>
+    <div class="prose-present">
+        {% markdown '/src/about/who-am-i.md' %}
+    </div>
+</section>
+
+<section class="flex flex-col mt-10">
+    <div class="flex mb-6 items-center relative">
+        <div class="flex flex-col flex-shrink-0 text-gray-darker">
+            <h2 class="text-gray text-shadow-heading z-1 type-presentation-heading-1">Recent<br>Works</h2>
+        </div>
+        <div class="transform right-0 -translate-y-4 translate-x-6 absolute">
+            {% image "./src/assets/images/abstrakt-design-2.png", "", "900px", "w-900px"  %}
+        </div>
+    </div>
+    <div class="prose-present">
+        {% markdown '/src/about/recent-works.md' %}
+    </div>
+</section>
+
+<section class="flex flex-col mt-10">
+    <div class="flex mb-6 items-center relative">
+        <div class="flex flex-col flex-shrink-0 text-gray-darker">
+            <h2 class="text-gray text-shadow-heading z-1 type-presentation-heading-1">Let's<br>Make<br>a Thing</h2>
+        </div>
+        <div class="transform right-0 -translate-y-4 -translate-x-9 absolute">
+            {% image "./src/assets/images/abstrakt-design-3.png", "", "700px", "w-700px"  %}
+        </div>
+    </div>
+    <div class="prose-present">
+        {% markdown '/src/about/make-a-thing.md' %}
+    </div>
+    <a href="{{ 'assets/files/Resume_V3.pdf' | url }}" target="_blank" class="mt-4 button self-start">
+        <svg class="h-4 mr-2 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 22.6h12a2 2 0 002-2V10.5c0-.6-.2-1-.6-1.4l-5.8-5.9a2 2 0 00-1.4-.6H6a2 2 0 00-2 2v16c0 1.1.9 2 2 2z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 3.1v6.5h6M8 17.6h7M8 13.6h7M8 9.6h1"/></svg>
+        <span>My Résumé</span>
+    </a>
+</section>
+</div>

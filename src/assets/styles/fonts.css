@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Petrona;
+    src: local('Petrona-Regular'),
+        url('../fonts/Petrona/Petrona-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: Petrona;
+    src: local('Petrona-SemiBold'),
+        url('../fonts/Petrona/Petrona-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: Petrona;
+    src: local('Petrona-Bold'),
+        url('../fonts/Petrona/Petrona-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+
+@font-face {
+    font-family: Podkova;
+    src: local('Podkova-Regular'),
+        url('../fonts/Podkova/Podkova-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: Podkova;
+    src: local('Podkova-ExtraBold'),
+        url('../fonts/Podkova/Podkova-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
