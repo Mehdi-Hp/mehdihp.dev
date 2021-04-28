@@ -1,0 +1,38 @@
+---
+title: Articles
+permalink: "articles/"
+layout: base.njk
+pagination:
+    data: articles
+    size: 100
+---
+
+<section class="my-7 type-content-body-1">
+    <header class="flex mb-6 items-center relative">
+        <h1 class="sr-only">List of articles</h1>
+        <div class="opacity-10 transform right-0 translate-x-7 absolute">
+            {% image "./src/assets/images/abstrakt-design-4.png", "", "1000px", "w-1000px"  %}
+        </div>
+        <p class="max-w-1280px z-1">
+            Case studies, Best practices and my own learnings with the flavor of HTML, CSS, JS, Vue, Accessibility and everything lying in between.
+        </p>
+    </header>
+    <ul class="flex flex-col space-y-6 max-w-1280px realtive">
+        {%- for article in articles -%}
+        <li class="bg-white rounded flex flex-col p-5 z-1">
+            <a class="flex flex-col mb-4 hover:underline" href="#">
+                <h2 class="text-primary-dark type-content-heading-2">
+                    {{ article.title | safe }}
+                </h2>
+                <p class="text-gray type-content-subtitle">
+                    {{ article.description | safe }}
+                </p>
+            </a>
+            <span class="text-gray-dark type-content-subtitle">
+                Published at 
+                <time datetime="{{ article.published_at | toMachineDate }}">{{ article.published_at | toReadableDate }}</time>
+            </span>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>

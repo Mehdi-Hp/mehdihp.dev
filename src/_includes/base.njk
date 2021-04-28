@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="text-base">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="preload" as="font" href="{{ 'assets/fonts/Podkova/Podkova-Regular.woff2' | url}}" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ 'assets/fonts/Podkova/Podkova-ExtraBold.woff2' | url}}" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ 'assets/styles/fonts.css' | url }}" />
+    <link rel="stylesheet" href="{{ 'assets/styles/tailwind.css' | url }}" />
+</head>
+<body class="bg-gray-lighter text-gray-darker" style="text-rendering: geometricprecision;">
+    <nav class="flex mx-auto space-x-4 mt-5 text-gray-dark px-5 w-1600px items-center type-presentation-body-1 <xs:w-1/1 <sm:w-480px <md:w-640px <lg:w-768px <xl:w-960px <xxl:w-1280px">
+        <a class="hover:text-primary" href="{{ '/articles' | url }}">Articles</a>
+        <div class="bg-gray rounded h-8px mx-4 w-2px"></div>
+        <a class="hover:text-primary" href="{{ '/#who-am-i' | url }}">About Me</a>
+        <div class="bg-gray rounded h-8px mx-4 w-2px"></div>
+        <a target="_blank" rel="noopener" class="hover:text-primary" href="{{ 'https://github.com/Mehdi-Hp' | url }}">Github</a>
+        <div class="bg-gray rounded h-8px mx-4 w-2px"></div>
+        <a class="hover:text-primary" href="{{ '#reach-me' | url }}">Contact Info</a>
+    </nav>
+    <main class="mx-auto max-w-full px-5 w-1600px <xs:w-1/1 <sm:w-480px <md:w-640px <lg:w-768px <xl:w-960px <xxl:w-1280px">
+        {{ content | safe }}
+    </main>
+    <div class="mt-10 w-full relative overflow-hidden">
+        {% image "./src/assets/images/footer.jpg", "", "1600px", "w-full h-full object-cover absolute inset-0"  %}
+        <div class="bg-gradient-to-b from-gray-lighter inset-0 absolute"></div>
+        <footer class="flex flex-col mx-auto max-w-full p-5 w-1600px z-1 relative <xs:w-1/1 <sm:w-480px <md:w-640px <lg:w-768px <xl:w-960px <xxl:w-1280px">
+            <h2 id="reach-me" class="text-gray text-shadow-heading z-1 type-presentation-heading-2">Reach Me</h2>
+            <div class="z-1 prose-present">
+                If you want to hire me, either part-time or full-time, send me an email and I will reach you back as soon as I can.
+                Do you have a question or a request on open-source projects? mention me at @Mehdi_HoseiniP or on my Github. I would be happy to help you out.
+            </div>
+            <ul class="flex mt-5 items-center">
+                <li>
+                    <a href="https://github.com/Mehdi-Hp" target="_blank" rel="noopener" class="flex text-primary items-center">
+                        <svg class="mr-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.0800781C5.37 0.0800781 0 5.45008 0 12.0801C0 17.3901 3.435 21.8751 8.205 23.4651C8.805 23.5701 9.03 23.2101 9.03 22.8951C9.03 22.6101 9.015 21.6651 9.015 20.6601C6 21.2151 5.22 19.9251 4.98 19.2501C4.845 18.9051 4.26 17.8401 3.75 17.5551C3.33 17.3301 2.73 16.7751 3.735 16.7601C4.68 16.7451 5.355 17.6301 5.58 17.9901C6.66 19.8051 8.385 19.2951 9.075 18.9801C9.18 18.2001 9.495 17.6751 9.84 17.3751C7.17 17.0751 4.38 16.0401 4.38 11.4501C4.38 10.1451 4.845 9.06508 5.61 8.22508C5.49 7.92508 5.07 6.69508 5.73 5.04508C5.73 5.04508 6.735 4.73008 9.03 6.27508C9.99 6.00508 11.01 5.87008 12.03 5.87008C13.05 5.87008 14.07 6.00508 15.03 6.27508C17.325 4.71508 18.33 5.04508 18.33 5.04508C18.99 6.69508 18.57 7.92508 18.45 8.22508C19.215 9.06508 19.68 10.1301 19.68 11.4501C19.68 16.0551 16.875 17.0751 14.205 17.3751C14.64 17.7501 15.015 18.4701 15.015 19.5951C15.015 21.2001 15 22.4901 15 22.8951C15 23.2101 15.225 23.5851 15.825 23.4651C18.2072 22.6608 20.2772 21.1298 21.7437 19.0874C23.2101 17.0451 23.9993 14.5944 24 12.0801C24 5.45008 18.63 0.0800781 12 0.0800781Z" fill="#59AE90"/></g><defs><clipPath id="clip0"><rect width="24" height="24" fill="white" transform="translate(0 0.0800781)"/></clipPath></defs></svg>
+                        <span class="type-presentation-body-1">Github</span>
+                    </a>
+                </li>
+                <div class="bg-primary rounded h-8px mx-4 w-2px"></div>
+                <li>
+                    <a href="https://twitter.com/Mehdi_HoseiniP" target="_blank" rel="noopener" class="flex text-primary items-center">
+                        <svg class="mr-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.643 5.01715C22.808 5.38716 21.911 5.63716 20.968 5.75016C21.941 5.16795 22.6689 4.25162 23.016 3.17216C22.1018 3.71514 21.1013 4.09735 20.058 4.30216C19.3564 3.55302 18.4271 3.05648 17.4143 2.88963C16.4016 2.72278 15.3621 2.89495 14.4572 3.37941C13.5524 3.86387 12.8328 4.63352 12.4102 5.56886C11.9875 6.5042 11.8855 7.55291 12.12 8.55216C10.2677 8.45915 8.45562 7.9777 6.80142 7.13906C5.14722 6.30042 3.68784 5.12332 2.518 3.68416C2.118 4.37416 1.888 5.17416 1.888 6.02616C1.88755 6.79315 2.07643 7.5484 2.43788 8.22489C2.79932 8.90138 3.32216 9.47819 3.96 9.90416C3.22027 9.88062 2.49687 9.68074 1.85 9.32116V9.38115C1.84992 10.4569 2.22203 11.4995 2.90318 12.3322C3.58433 13.1648 4.53257 13.7361 5.587 13.9492C4.90078 14.1349 4.18133 14.1622 3.483 14.0292C3.78049 14.9548 4.35999 15.7642 5.14036 16.3441C5.92074 16.924 6.86291 17.2453 7.835 17.2632C6.18483 18.5586 4.14688 19.2612 2.049 19.2582C1.67738 19.2583 1.30607 19.2366 0.936996 19.1932C3.06647 20.5623 5.54534 21.289 8.077 21.2862C16.647 21.2862 21.332 14.1882 21.332 8.03216C21.332 7.83216 21.327 7.63015 21.318 7.43015C22.2293 6.77113 23.0159 5.95505 23.641 5.02016L23.643 5.01715Z" fill="#59AE90"/></svg>
+                        <span class="type-presentation-body-1">Twitter</span>
+                    </a>
+                </li>
+                <div class="bg-primary rounded h-8px mx-4 w-2px"></div>
+                <li>
+                    <a href="mailto:mhhhhp@proton.me" target="_blank" rel="noopener" class="flex text-primary items-center">
+                        <svg class="mr-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16.0801C14.2091 16.0801 16 14.2892 16 12.0801C16 9.87094 14.2091 8.08008 12 8.08008C9.79086 8.08008 8 9.87094 8 12.0801C8 14.2892 9.79086 16.0801 12 16.0801Z" stroke="#59AE90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 12.0801C22 6.55708 17.523 2.08008 12 2.08008C6.477 2.08008 2 6.55708 2 12.0801C2 17.6031 6.477 22.0801 12 22.0801C14.252 22.0801 16.33 21.3361 18.001 20.0801" stroke="#59AE90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8.08008V12.0801C16 13.0801 16.6 15.0801 19 15.0801C21.4 15.0801 22 13.0801 22 12.0801" stroke="#59AE90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="type-presentation-body-1">Email</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="flex flex-col mt-9 text-center z-1">
+                <small class="text-gray-darker type-presentation-body-1">
+                    © {% year %} / Copyright Mehdi HoseiniPajooh. All rights reserved.
+                </small>
+                <i class="text-gray-dark z-1 type-presentation-body-1">
+                    This site is built with eleventy and hosted on Netlify. The source code is hosted on Github.
+                </i>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
