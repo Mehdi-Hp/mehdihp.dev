@@ -5,7 +5,7 @@ const typographyPlugin = require('windicss/plugin/typography');
 module.exports = defineConfig({
     extract: {
         include: [
-            '_BUNDLE_/**/*.{html}'
+            'public/**/*.{html}'
         ],
         exclude: [
             'node_modules/**/*',

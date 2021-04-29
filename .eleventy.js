@@ -17,7 +17,7 @@ async function imageShortcode(src, alt, sizes, classList) {
         widths,
         formats,
         urlPath: '/assets/images/',
-        outputDir: '_BUNDLE_/assets/images/'
+        outputDir: 'public/assets/images/'
     });
     const imageAttributes = {
         class: classList,
@@ -71,7 +71,7 @@ module.exports = (eleventyConfig) => {
     return {
         dir: {
             input: 'src',
-            output: '_BUNDLE_',
+            output: 'public',
             data: '_data'
         },
         jsDataFileSuffix: '.data'

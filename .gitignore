@@ -1,3 +1,4 @@
 node_modules
 public
 _BUNDLE_
+src/assets/styles/tailwind.css
