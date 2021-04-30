@@ -105,6 +105,65 @@ module.exports = defineConfig({
                                 }
                             }
                         }
+                    },
+                    article: {
+                        css: {
+                            'color': theme('colors.gray.darker'),
+                            'font-family': theme('fontFamily.serif'),
+                            'font-size': theme('spacing.4'),
+                            'font-weight': '500',
+                            'line-height': '1.618',
+                            'max-width': '80ch',
+                            'h1': {
+                                'font-family': theme('fontFamily.slab'),
+                                'font-size': theme('spacing.7'),
+                                'font-weight': '800',
+                                'color': theme('colors.primary.dark'),
+                                'line-height': '1'
+                            },
+                            'h2': {
+                                'font-family': theme('fontFamily.serif'),
+                                'font-size': theme('spacing.6'),
+                                'font-weight': '700'
+                            },
+                            'h3': {
+                                'font-family': theme('fontFamily.serif'),
+                                'font-size': theme('spacing.5'),
+                                'font-weight': '700'
+                            },
+                            'p': {
+                                'margin': `${theme('spacing.3')} 0 ${theme('spacing.3')} 0`
+                            },
+                            'pre': {
+                                'margin': `${theme('spacing.3')} 0 ${theme('spacing.3')} 0`,
+                                'background-color': theme('colors.gray.light'),
+                                'padding': theme('spacing.4'),
+                                'border-radius': theme('borderRadius.DEFAULT'),
+                                'font-size': '0.8rem',
+                                '& > code': {
+                                    'font-family': 'Cascadia, \'ubuntu mono\', \'monospace\''
+                                }
+                            },
+                            'a': {
+                                'color': theme('colors.primary.DEFAULT'),
+                                'text-decoration': 'underline',
+                                '&:hover': {
+                                    color: theme('colors.primary.dark')
+                                }
+                            },
+                            'ul': {
+                                'list-style': 'disc',
+                                'list-style-position': 'outside',
+                                'padding-left': theme('spacing.5'),
+                                'margin': `${theme('spacing.3')} 0 ${theme('spacing.3')} 0`
+                            },
+                            'ul > li': {
+                                'margin-bottom': theme('spacing.3'),
+                                '&::marker': {
+                                    'color': theme('colors.primary.DEFAULT')
+                                }
+                            }
+                        }
                     }
                 };
             }
@@ -160,7 +219,7 @@ module.exports = defineConfig({
                 '.type-content-body-1': {
                     'font-family': config('theme.fontFamily.serif'),
                     'font-size': config('theme.spacing.4'),
-                    'font-weight': '400',
+                    'font-weight': '500',
                     'line-height': '1.618'
                 },
                 '.type-content-body-2': {

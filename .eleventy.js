@@ -1,7 +1,22 @@
 const Image = require('@11ty/eleventy-img');
 const HtmlMin = require('html-minifier');
 const markdownShortcode = require('eleventy-plugin-markdown-shortcode');
+const hljs = require('highlight.js');
+const Normalizer = require('prismjs/plugins/normalize-whitespace/prism-normalize-whitespace');
 const { format } = require('date-fns');
+const MarkdownIt = require('markdown-it')({
+    breaks: true,
+    typographer: true,
+    highlight(str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(str, { language: lang }).value;
+            } catch (error) { return error; }
+        }
+
+        return ''; // use external default escaping
+    }
+});
 const { theme: { screens } } = require('./windi.config');
 
 async function imageShortcode(src, alt, sizes, classList) {
@@ -40,6 +55,9 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy('src/assets/files');
 
     eleventyConfig.addShortcode('year', () => { return `${new Date().getFullYear()}`; });
+    eleventyConfig.addPairedShortcode('parseMarkdown', (content) => {
+        return MarkdownIt.render(content.trim());
+    });
 
     eleventyConfig.addFilter('toReadableDate', (isoDate) => {
         const date = new Date(isoDate);

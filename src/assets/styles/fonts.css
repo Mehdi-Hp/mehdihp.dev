@@ -1,7 +1,7 @@
 @font-face {
     font-family: Petrona;
     src: local('Petrona-Regular'),
-        url('../fonts/Petrona/Petrona-Regular.woff2') format('woff2');
+        url('../fonts/Petrona/Petrona-Medium.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -40,6 +40,15 @@
     src: local('Podkova-ExtraBold'),
         url('../fonts/Podkova/Podkova-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: Cascadia;
+    src: local('Cascadia'),
+        url('../fonts/Cascadia/CascadiaCode.woff2') format('woff2');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
     unicode-range: U+000-5FF;
