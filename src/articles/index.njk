@@ -20,7 +20,7 @@ pagination:
     <ul class="flex flex-col space-y-6 max-w-1280px">
         {%- for article in articles -%}
         <li class="bg-white rounded flex flex-col p-5 z-1">
-            <a class="flex flex-col mb-4 hover:underline" href="{{ article.slug }}">
+            <a class="flex flex-col mb-4 hover:underline" href="/articles/{{ article.slug }}">
                 <h2 class="text-primary-dark type-content-heading-2">
                     {{ article.title | safe }}
                 </h2>
