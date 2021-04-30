@@ -1,0 +1,19 @@
+---
+layout: base.njk
+pagination:
+  data: articles
+  size: 1
+  alias: article
+permalink: articles/{{ article.slug }}/index.html
+---
+
+<article class="py-7 prose-article">
+    <h1 class="text-primary-dark type-presentation-heading-2">
+        {{ article.title | safe }}
+    </h1>
+    <div class="mt-6">
+        {% parseMarkdown %}
+            {{ article.content | safe }}
+        {% endparseMarkdown %}
+    </div>
+</artciel>
