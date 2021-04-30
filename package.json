@@ -10,7 +10,7 @@
         "serve": "npm-run-all -l --parallel serve:html serve:css",
         "serve:html": "eleventy --serve",
         "serve:css": "nodemon --watch 'public/**/*' -e html --exec 'windicss \"public/**/*.html\" -o public/assets/styles/tailwind.css -f windi.config.js -t'",
-        "build": "npm-run-all build:html build:css",
+        "build": "npm-run-all clean build:html build:css",
         "build:html": "eleventy build",
         "build:css": "windicss 'public/**/*.html' -o src/assets/styles/tailwind.css -f windi.config.js -t -m"
     },
